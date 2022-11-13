@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import { Home } from "../views/Home";
+import { Country } from "../views/Country";
 
 const Router: React.FC = (): JSX.Element => {
   return (
@@ -11,6 +12,7 @@ const Router: React.FC = (): JSX.Element => {
         <div className="content app__element">
           <Switch>
             <Route path="/" element={<Home />} />
+            <Route path="/country/:name" element={<Country />} />
           </Switch>
         </div>
       </div>

@@ -1,14 +1,16 @@
-declare interface StoreState {
-  darkMode: boolean;
-  countriesData: unknown[];
+declare interface CountriesData {
+  countries: Country[];
+  filteredCountries: Country[];
+  regionCountries: Country[];
 }
 
-declare enum StoreActionTypes {
-  FETCH_COUNTRIES_DATA = "FETCH_COUNTRIES_DATA",
-  SET_DARK_MODE = "SET_DARK_MODE"
+declare interface StoreState {
+  darkMode: boolean;
+  countriesData: CountriesData;
 }
+
 
 declare interface StoreAction {
   type: StoreActionTypes;
-  payload: unknown;
+  payload: string | boolean | Country[];
 }

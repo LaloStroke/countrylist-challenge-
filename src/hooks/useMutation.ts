@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Dto from "../dto";
 
-const useQuery = (url: string, dtoKey?: string) => {
+const useMutation = (dtoKey?: string) => {
   const [state, setState] = useState<{
-    data: { [key: string]: any }
+    data: any;
     loading: boolean;
     isSuccess: boolean;
     status: number;
@@ -16,7 +16,7 @@ const useQuery = (url: string, dtoKey?: string) => {
     error: null
   });
 
-  const fetchData = () =>
+  const fetchData = (url: string) =>
     fetch(url)
       .then(async (response) => {
         return {
@@ -46,11 +46,10 @@ const useQuery = (url: string, dtoKey?: string) => {
         });
       });
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  return state;
+  return {
+    ...state,
+    fetchData
+  };
 };
 
-export default useQuery;
+export default useMutation;
