@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Dto from "../dto";
 
-const useQuery = (url: string, dtoKey?: string) => {
+const useQuery = (url: string, dtoKey?: DTOS) => {
   const [state, setState] = useState<{
-    data: { [key: string]: any }
+    data: { [key: string]: any };
     loading: boolean;
     isSuccess: boolean;
     status: number;
@@ -15,7 +15,6 @@ const useQuery = (url: string, dtoKey?: string) => {
     loading: true,
     error: null
   });
-
   const fetchData = () =>
     fetch(url)
       .then(async (response) => {

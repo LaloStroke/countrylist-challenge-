@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CountryCard: React.FC<{ country: Country }> = ({ country }): JSX.Element => {
   return (
-    <Link to={`/country/${country.name.common.toLowerCase()}`}>
+    <Link to={`/country/${country.cca3.toLowerCase()}`}>
       <img src={country.flags.png} alt={country.name.common} />
       <div>
         <strong>

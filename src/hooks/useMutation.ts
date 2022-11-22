@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Dto from "../dto";
 
-const useMutation = (dtoKey?: string) => {
+const useMutation = (dtoKey?: DTOS) => {
   const [state, setState] = useState<{
     data: any;
     loading: boolean;

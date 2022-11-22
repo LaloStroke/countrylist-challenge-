@@ -12,7 +12,7 @@ const Router: React.FC = (): JSX.Element => {
         <div className="content app__element">
           <Switch>
             <Route path="/" element={<Home />} />
-            <Route path="/country/:name" element={<Country />} />
+            <Route path="/country/:code" element={<Country />} />
           </Switch>
         </div>
       </div>

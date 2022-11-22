@@ -37,7 +37,6 @@ export const Home: React.FC = (): JSX.Element => {
   }, [value]);
 
   useEffect(() => {
-    console.log("region", region);
     if (region === "All") {
       dispatch({ type: StoreActionTypes.REGION_COUNTRIES_FILTRED, payload: "All" });
       return;
