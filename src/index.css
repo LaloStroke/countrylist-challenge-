@@ -4,6 +4,8 @@
   --main: hsl(207, 26%, 17%);
   --second: hsl(209, 23%, 22%);
   --text: hsl(0, 0%, 100%);
+  --shadowColor: rgba(0, 0, 0, 0.137);
+  --shadow: -1px 1px 20px var(--shadowColor);
 }
 
 * {

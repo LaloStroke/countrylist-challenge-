@@ -1,4 +1,5 @@
 import React from "react";
+import "./CountryFilter.css";
 
 const Input: React.FC<{
   placeholder: string;
@@ -7,11 +8,14 @@ const Input: React.FC<{
   icon?: JSX.Element;
 }> = ({ placeholder, value, icon, onChange }): JSX.Element => {
   return (
-    <input
-      placeholder={placeholder}
-      value={value}
-      onInput={(event) => onChange(event as React.ChangeEvent<HTMLInputElement>)}
-    />
+    <div className="input">
+      <i className="fa-solid fa-magnifying-glass"></i>
+      <input
+        placeholder={placeholder}
+        value={value}
+        onInput={(event) => onChange(event as React.ChangeEvent<HTMLInputElement>)}
+      />
+    </div>
   );
 };
 

@@ -23,6 +23,8 @@ export const Country: React.FC = (): JSX.Element => {
   useEffect(() => {
     fetchData(`https://restcountries.com/v3.1/alpha/${code}`);
   }, [code]);
+
+  console.log(data, "data");
   return (
     <div>
       <div>
@@ -59,8 +61,24 @@ export const Country: React.FC = (): JSX.Element => {
                 {validation(data.country.region)}
               </p>
               <p>
+                <strong>Sub Region:</strong>
+                {validation(data.country.subregion)}
+              </p>
+              <p>
                 <strong>Capital:</strong>
                 {validation(data.country.capital)}
+              </p>
+              <p>
+                <strong>Top Level Domain:</strong>
+                {validation(data.country.tld)}
+              </p>
+              <p>
+                <strong>Currencies:</strong>
+                {validation(data.country.currencies)}
+              </p>
+              <p>
+                <strong>Languages:</strong>
+                {validation(data.country.languages)}
               </p>
             </div>
             <div>
