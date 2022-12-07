@@ -23,6 +23,11 @@ const storeReducer: Reducer<
   }
 > = (store = initialState, action) => {
   switch (action.type) {
+    case StoreActionTypes.SET_DARK_MODE:
+      return {
+        ...store,
+        darkMode: action.payload as boolean
+      };
     case StoreActionTypes.FETCH_COUNTRIES_DATA:
       return {
         ...store,

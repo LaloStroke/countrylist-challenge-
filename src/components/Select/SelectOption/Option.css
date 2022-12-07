@@ -1,0 +1,9 @@
+.option {
+  cursor: pointer;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+.option:hover {
+  background-color: hsl(0, 0%, 52%);
+}

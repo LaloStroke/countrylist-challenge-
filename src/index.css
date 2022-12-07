@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@400;500&family=Nunito+Sans:wght@300;600;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-:root {
+.darkMode {
   --main: hsl(207, 26%, 17%);
   --second: hsl(209, 23%, 22%);
   --text: hsl(0, 0%, 100%);
+  --shadowColor: rgba(0, 0, 0, 0.137);
+  --shadow: -1px 1px 20px var(--shadowColor);
+}
+
+.lightMode {
+  --main: hsl(0, 0%, 98%);
+  --second: hsl(0, 0%, 100%);
+  --text: hsl(200, 15%, 8%);
   --shadowColor: rgba(0, 0, 0, 0.137);
   --shadow: -1px 1px 20px var(--shadowColor);
 }
@@ -15,6 +23,8 @@
   box-sizing: border-box;
   color: var(--text);
 }
-body {
+.app {
+  min-height: 100vh;
+  transition: all 0.5s ease;
   background-color: var(--main);
 }

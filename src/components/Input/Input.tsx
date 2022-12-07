@@ -11,6 +11,7 @@ const Input: React.FC<{
     <div className="input">
       <i className="fa-solid fa-magnifying-glass"></i>
       <input
+        className="input__field"
         placeholder={placeholder}
         value={value}
         onInput={(event) => onChange(event as React.ChangeEvent<HTMLInputElement>)}

@@ -1,11 +1,20 @@
 .input {
   border: none;
+  border-radius: 0.3rem;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2);
-  width: 100%;
-  padding: 1rem;
+  width: 22em;
+  height: auto;
   background-color: var(--second);
+  padding-left: 2rem;
 }
-
-.input::placeholder {
+.input__field {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 1rem;
+  padding-left: 2rem;
+  width: 90%;
+}
+.input__field::placeholder {
   color: var(--text);
 }

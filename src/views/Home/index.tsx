@@ -5,7 +5,9 @@ import { StoreContext } from "../../store/storeProvider";
 import { StoreActionTypes } from "../../store/storeReducer";
 import Input from "../../components/Input/Input";
 import useMutation from "../../hooks/useMutation";
-import Search from "../../components/Select/Select";
+import Select from "../../components/Select/Select";
+import SelectOption from "../../components/Select/SelectOption";
+import "./index.css";
 
 export const Home: React.FC = (): JSX.Element => {
   const [value, setValue] = useState<string>("");
@@ -54,10 +56,16 @@ export const Home: React.FC = (): JSX.Element => {
   }, [filteredData]);
 
   return (
-    <div>
-      <div>
+    <div className="home">
+      <div className="home__selector">
         <Input value={value} placeholder="Search for a country..." onChange={handleInput} />
-        <Search regions={REGION} handleSelect={handleSelect} />
+        <Select placeholder="Filter By Region" selectHandler={handleSelect}>
+          {REGION.map((region: Regions) => (
+            <SelectOption key={region} value={region}>
+              {region}
+            </SelectOption>
+          ))}
+        </Select>
       </div>
       <div>
         {loading && countries.length === 0 && <div>Loading...</div>}

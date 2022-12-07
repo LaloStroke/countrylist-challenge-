@@ -1,0 +1,105 @@
+.button_elements:hover {
+  background-color: lightgray;
+}
+.countries_button:hover {
+  background-color: lightgray;
+}
+.button_elements:active {
+  background-color: gray;
+}
+.countries_button:active {
+  background-color: gray;
+}
+
+.CountryView {
+  display: grid;
+  gap: 3rem;
+  padding: 1rem;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.button_elements {
+  cursor: pointer;
+  background-color: var(--second);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.1rem;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2);
+  display: grid;
+  justify-content: space-between;
+  place-items: center;
+  grid-template-columns: 1rem 1fr;
+  gap: 0.5rem;
+}
+.country_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  max-width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+}
+.info {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.general_info {
+  max-width: 36.5rem;
+}
+.info_title {
+  display: flex;
+  height: 3rem;
+  width: 18rem;
+  padding: 2rem 0;
+  align-items: center;
+  justify-content: left;
+}
+.info_1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: left;
+}
+.span::after {
+  content: ", ";
+}
+.span:last-child::after {
+  content: "";
+}
+.data {
+  display: grid;
+  gap: 0.5rem;
+  width: 17.5rem;
+}
+.flag {
+  display: grid;
+  width: minmax(14rem, 70%);
+}
+.flag_img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.border_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.border_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.countries_button {
+  padding: 0.4rem 1.8rem;
+  background-color: var(--second);
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2);
+}

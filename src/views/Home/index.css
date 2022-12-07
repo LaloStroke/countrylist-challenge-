@@ -1,2 +1,9 @@
 .home {
 }
+.home__selector {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
